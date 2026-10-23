@@ -29,7 +29,7 @@ Tugas ini merupakan tugas individu mata kuliah **Deep Learning (Enrichment Class
 
 ### Ketentuan & Spesifikasi Soal:
 1. **Zero Black-Box Abstraction:** Semua komponen jaringan—mulai dari propagasi maju (*forward propagation*), fungsi *loss* (*squared error* & *cross-entropy*), penurunan gradien kalkulus (*gradient descent*), hingga propagasi balik bertingkat (*backpropagation*) dan lapisan konvolusi—wajib dibangun dari nol (**pure Python & NumPy**).
-2. **Kajian Lengkap 10 Bab Buku Panduan:**
+2. **Kajian Lengkap 15 Bab Buku Panduan:**
    * **Part 1 (Bab 01 – 06):** Fondasi Jaringan Syaraf Tiruan:
      * *Bab 01:* Pengantar Deep Learning, otomatisasi kecerdasan, dan persiapan *environment*.
      * *Bab 02:* Konsep dasar ML (Supervised vs Unsupervised, Parametric vs Nonparametric, siklus 3 langkah Predict-Compare-Learn).
@@ -42,6 +42,12 @@ Tugas ini merupakan tugas individu mata kuliah **Deep Learning (Enrichment Class
      * *Bab 08:* Pencegahan *Overfitting*, regularisasi *Inverted Dropout* ($p = 0.5$, skala $\times 2.0$), serta optimasi *Mini-Batch Gradient Descent*.
      * *Bab 09:* Eksplorasi Fungsi Aktivasi Non-linier (Sigmoid, Tanh, ReLU), mitigasi *Vanishing Gradient*, dan pemodelan probabilitas Softmax dengan *Categorical Cross-Entropy*.
      * *Bab 10:* Jaringan Syaraf Konvolusional (CNN), prinsip *weight sharing*, operasi konvolusi 2D, kernel deteksi tepi Sobel, dan *spatial subsampling* Max Pooling.
+   * **Part 3 (Bab 11 – 15):** Pemrosesan Bahasa Alami, Optimasi Otomatis, dan Pembelajaran Terdesentralisasi:
+     * *Bab 11:* Neural Networks that Understand Language (Word Embeddings Word2Vec CBOW scratch, penalaran semantik `king - man + woman = queen`, normalisasi Cosine Similarity, dan proyeksi PCA).
+     * *Bab 12:* Recurrent Neural Networks (RNN), pemrosesan data sekuensial teks Shakespeare, Backpropagation Through Time (BPTT), mitigasi Gradient Clipping, dan generasi teks berkarakter.
+     * *Bab 13:* Introducing Automatic Optimization (Building a Deep Learning Framework), implementasi Autograd Engine mandiri dengan kelas Tensor dinamis, graf komputasi, automatic backpropagation, dan modularitas layer.
+     * *Bab 14:* Learning to Write Like Shakespeare (LSTM), mitigasi vanishing gradient dengan cell state additive gradient highway, arsitektur 4 gerbang kendali (forget, input, candidate, output), dan generator Shakespeare lanjutan.
+     * *Bab 15:* Deep Learning on Unseen Data (Federated Learning & Differential Privacy), komputasi model terdistribusi di sisi edge tanpa sentralisasi data, Federated Averaging (FedAvg), penanganan non-IID data skew, Secure Multi-Party Aggregation (SecAgg pairwise zero-sum masking), dan pertukaran privasi-akurasi via Differential Privacy (DP-FedAvg).
 3. **Struktur Setiap Notebook:**
    * Identitas lengkap mahasiswa & mata kuliah.
    * Judul Bab & Capaian Pembelajaran (*Objectives*).
@@ -68,6 +74,11 @@ Setiap bab dapat langsung dijalankan secara interaktif di **Google Colab** denga
 | **08** | **Regularization and Batching**<br>Dilema overfitting, regularisasi Inverted Dropout ($p=0.5$), akselerasi Mini-Batch GD ($B=100$) | Manning Ch. 8 | Completed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/GrokkingDeepLearning/blob/main/Chapter%2008%20-%20Regularization%20and%20Batching/08_regularization_batching.ipynb) | [08_regularization_batching.ipynb](Chapter%2008%20-%20Regularization%20and%20Batching/08_regularization_batching.ipynb) |
 | **09** | **Activation Functions**<br>Non-linearitas Sigmoid, Tanh, ReLU, Vanishing Gradient, Softmax & Cross-Entropy Loss | Manning Ch. 9 | Completed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/GrokkingDeepLearning/blob/main/Chapter%2009%20-%20Activation%20Functions/09_activation_functions.ipynb) | [09_activation_functions.ipynb](Chapter%2009%20-%20Activation%20Functions/09_activation_functions.ipynb) |
 | **10** | **Convolutional Neural Networks**<br>Konvolusi 2D diskrit, prinsip weight sharing, kernel Sobel & Ridge, Max Pooling ($2\times 2$) | Manning Ch. 10 | Completed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/GrokkingDeepLearning/blob/main/Chapter%2010%20-%20Convolutional%20Neural%20Networks/10_convolutional_neural_networks.ipynb) | [10_convolutional_neural_networks.ipynb](Chapter%2010%20-%20Convolutional%20Neural%20Networks/10_convolutional_neural_networks.ipynb) |
+| **11** | **Neural Networks that Understand Language**<br>Word2Vec CBOW scratch, penalaran semantik `king - man + woman = queen`, Cosine Similarity, PCA | Manning Ch. 11 | Completed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/GrokkingDeepLearning/blob/main/Chapter%2011%20-%20Neural%20Networks%20that%20Understand%20Language/11_word_embeddings.ipynb) | [11_word_embeddings.ipynb](Chapter%2011%20-%20Neural%20Networks%20that%20Understand%20Language/11_word_embeddings.ipynb) |
+| **12** | **Recurrent Neural Networks (RNN)**<br>Pemrosesan sekuensial, BPTT, pemodelan karakter teks Shakespeare, Gradient Clipping | Manning Ch. 12 | Completed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/GrokkingDeepLearning/blob/main/Chapter%2012%20-%20Recurrent%20Neural%20Networks/12_recurrent_neural_networks.ipynb) | [12_recurrent_neural_networks.ipynb](Chapter%2012%20-%20Recurrent%20Neural%20Networks/12_recurrent_neural_networks.ipynb) |
+| **13** | **Introducing Automatic Optimization**<br>Membangun Autograd DL Framework dari nol, Tensor dinamis, Computational Graph, Autograd | Manning Ch. 13 | Completed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/GrokkingDeepLearning/blob/main/Chapter%2013%20-%20Introducing%20Automatic%20Optimization/13_automatic_optimization.ipynb) | [13_automatic_optimization.ipynb](Chapter%2013%20-%20Introducing%20Automatic%20Optimization/13_automatic_optimization.ipynb) |
+| **14** | **Learning to Write Like Shakespeare (LSTM)**<br>Long Short-Term Memory, 4 gerbang memori, Cell State gradient highway, Shakespeare generation | Manning Ch. 14 | Completed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/GrokkingDeepLearning/blob/main/Chapter%2014%20-%20Learning%20to%20Write%20Like%20Shakespeare/14_lstm_shakespeare.ipynb) | [14_lstm_shakespeare.ipynb](Chapter%2014%20-%20Learning%20to%20Write%20Like%20Shakespeare/14_lstm_shakespeare.ipynb) |
+| **15** | **Deep Learning on Unseen Data (Federated Learning)**<br>Privasi data terdesentralisasi, Federated Averaging (FedAvg), SecAgg Masking, DP-FedAvg | Manning Ch. 15 | Completed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/GrokkingDeepLearning/blob/main/Chapter%2015%20-%20Deep%20Learning%20on%20Unseen%20Data/15_federated_learning.ipynb) | [15_federated_learning.ipynb](Chapter%2015%20-%20Deep%20Learning%20on%20Unseen%20Data/15_federated_learning.ipynb) |
 
 > **💡 Catatan Penggunaan Google Colab:**  
 > Seluruh tautan Colab di atas telah diformat dengan *URL-encoding* standar (`%20` untuk spasi nama folder). Jika Anda membuka Colab secara manual, pilih tab **GitHub**, masukkan URL repositori `https://github.com/SatrioArjunaPutra/GrokkingDeepLearning`, lalu pilih notebook yang diinginkan.
@@ -82,16 +93,22 @@ GrokkingDeepLearning/
 ├── README.md
 ├── requirements.txt
 ├── Chapter 01 - Introducing Deep Learning/
+│   ├── README.md
 │   └── 01_introducing_deep_learning.ipynb
 ├── Chapter 02 - Fundamental Prerequisities/
+│   ├── README.md
 │   └── 02_fundamental_prerequisites.ipynb
 ├── Chapter 03 - Forward Propagation/
+│   ├── README.md
 │   └── 03_forward_propagation.ipynb
 ├── Chapter 04 - Gradient Descent and Learning/
+│   ├── README.md
 │   └── 04_gradient_descent.ipynb
 ├── Chapter 05 - Generalizing Gradient Descent/
+│   ├── README.md
 │   └── 05_generalizing_gradient_descent.ipynb
 ├── Chapter 06 - Backpropagation/
+│   ├── README.md
 │   └── 06_backpropagation.ipynb
 ├── Chapter 07 - Picture Weights and Feature Learning/
 │   ├── README.md
@@ -102,9 +119,24 @@ GrokkingDeepLearning/
 ├── Chapter 09 - Activation Functions/
 │   ├── README.md
 │   └── 09_activation_functions.ipynb
-└── Chapter 10 - Convolutional Neural Networks/
+├── Chapter 10 - Convolutional Neural Networks/
+│   ├── README.md
+│   └── 10_convolutional_neural_networks.ipynb
+├── Chapter 11 - Neural Networks that Understand Language/
+│   ├── README.md
+│   └── 11_word_embeddings.ipynb
+├── Chapter 12 - Recurrent Neural Networks/
+│   ├── README.md
+│   └── 12_recurrent_neural_networks.ipynb
+├── Chapter 13 - Introducing Automatic Optimization/
+│   ├── README.md
+│   └── 13_automatic_optimization.ipynb
+├── Chapter 14 - Learning to Write Like Shakespeare/
+│   ├── README.md
+│   └── 14_lstm_shakespeare.ipynb
+└── Chapter 15 - Deep Learning on Unseen Data/
     ├── README.md
-    └── 10_convolutional_neural_networks.ipynb
+    └── 15_federated_learning.ipynb
 ```
 
 ---
@@ -210,6 +242,65 @@ GrokkingDeepLearning/
     $$S(i, j) = (\mathbf{I} * \mathbf{K})(i, j) = \sum_{m} \sum_{n} I(i + m, j + n) K(m, n)$$
   * **Kernel Detektor Fitur:** Implementasi filter Sobel Horizontal (garis horizontal), Sobel Vertikal (garis vertikal), dan filter Ridge/Sudut.
   * **Max Pooling:** Reduksi dimensi spasial sebesar $75\%$ (dari $28 \times 28$ ke $14 \times 14$) yang memberikan toleransi terhadap distorsi spasial kecil.
+
+---
+
+### [Chapter 11 - Neural Networks that Understand Language](Chapter%2011%20-%20Neural%20Networks%20that%20Understand%20Language/11_word_embeddings.ipynb)
+* **Sintesis Konseptual:** Mentransformasikan data simbolik diskrit (kata teks) menjadi ruang representasi kontinu (*continuous vector space*) di mana geometri ruang vektor mencerminkan kesamaan semantik kontekstual (hipotesis distribusi Harris: *words that occur in similar contexts have similar meanings*).
+* **Poin Pembahasan Soal:**
+  * **Kelemahan Representasi One-Hot:** Vektor berdimensi sangat besar, sangat renggang (*sparse*), dan ortogonal satu sama lain ($\mathbf{x}_i \cdot \mathbf{x}_j = 0$), sehingga tidak mampu merepresentasikan relasi semantik antar kata.
+  * **Arsitektur CBOW (Continuous Bag-of-Words):** Memprediksi kata target $w_t$ dari rata-rata konteks jendela sekitarnya $[w_{t-k}, \dots, w_{t+k}]$.
+  * **Normalisasi Cosine Similarity:** Mengukur kedekatan sudut vektor makna terlepas dari magnitudo frekuensi kata:
+    $$\text{Cosine Similarity}(\mathbf{u}, \mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\|_2 \|\mathbf{v}\|_2}$$
+  * **Aritmatika Vektor Semantik:** Membuktikan relasi linier teratur pada ruang embedding (misal: $\mathbf{v}_{\text{king}} - \mathbf{v}_{\text{man}} + \mathbf{v}_{\text{woman}} \approx \mathbf{v}_{\text{queen}}$).
+  * **Reduksi Dimensi PCA:** Memproyeksikan manifold embedding berdimensi tinggi ke bidang 2D untuk memvisualisasikan klaster kategori kata (hewan, kota, profesi).
+
+---
+
+### [Chapter 12 - Recurrent Neural Networks](Chapter%2012%20-%20Recurrent%20Neural%20Networks/12_recurrent_neural_networks.ipynb)
+* **Sintesis Konseptual:** Mengolah data sekuensial yang memiliki ketergantungan temporal dengan memperkenalkan koneksi berulang (*recurrent loop*) yang bertindak sebagai memori internal sistem.
+* **Poin Pembahasan Soal:**
+  * **Keterbatasan Feedforward Networks:** Tidak mampu menangani input berukuran dinamis atau mengingat urutan temporal masa lalu.
+  * **Formulasi State Tersembunyi RNN:**
+    $$\mathbf{h}_t = \tanh(\mathbf{W}_{hh} \mathbf{h}_{t-1} + \mathbf{W}_{xh} \mathbf{x}_t + \mathbf{b}_h), \quad \hat{\mathbf{y}}_t = \text{softmax}(\mathbf{W}_{hy} \mathbf{h}_t + \mathbf{b}_y)$$
+  * **Backpropagation Through Time (BPTT):** Menguraikan graf komputasi sepanjang langkah waktu $T$, mendistribusikan akumulasi gradien kesalahan mundur melewati riwayat keadaan hidden state.
+  * **Eksploding & Vanishing Gradient:** Matriks bobot berulang $\mathbf{W}_{hh}$ yang dikalikan berulang kali menyebabkan gradien meledak secara eksponensial ($\|\mathbf{W}_{hh}\| > 1$) atau lenyap ($\|\mathbf{W}_{hh}\| < 1$).
+  * **Mitigasi Gradient Clipping:** Membatasi norm gradien global jika melebihi ambang batas ($\mathbf{g} \leftarrow \mathbf{g} \cdot \frac{\text{clip\_threshold}}{\max(\text{clip\_threshold}, \|\mathbf{g}\|_2)}$) untuk menstabilkan pembaruan bobot saat melatih model karakter Shakespeare.
+
+---
+
+### [Chapter 13 - Introducing Automatic Optimization](Chapter%2013%20-%20Introducing%20Automatic%20Optimization/13_automatic_optimization.ipynb)
+* **Sintesis Konseptual:** Membangun mesin diferensiasi otomatis (*Autograd Engine*) dan kerangka kerja deep learning mandiri dari nol, mengabstraksi perhitungan turunan rantai kalkulus ke dalam graf komputasi dinamis berbasis objek Tensor.
+* **Poin Pembahasan Soal:**
+  * **Kelas Tensor Dinamis:** Membungkus *array* NumPy dengan pelacakan riwayat pembuat (*creators*), operasi diferensiasi (*creation operations*), dan akumulasi gradien parsial.
+  * **Graf Komputasi Terarah (DAG):** Membangun representasi topologis operasi matematika secara run-time (*tape-based automatic differentiation* seperti PyTorch).
+  * **Metode `backward()` Rekursif/Topologis:** Mengalirkan gradien dari tensor keluaran loss kembali ke seluruh parameter masukan secara otomatis tanpa kalkulasi manual turunan simbolik.
+  * **Abstraksi Modular Jaringan:** Membangun lapisan terstandarisasi (`Linear`, `Sequential`, `Embedding`), fungsi aktivasi (`Tanh`, `Sigmoid`, `ReLU`), fungsi loss (`MSELoss`, `CrossEntropyLoss`), dan pengoptimal parameter (`SGD`).
+  * **Validasi End-to-End:** Menguji *framework* buatan sendiri untuk melatih jaringan multi-lapis klasifikasi dan membuktikan konvergensi loss yang identik dengan rumus analitis manual.
+
+---
+
+### [Chapter 14 - Learning to Write Like Shakespeare](Chapter%2014%20-%20Learning%20to%20Write%20Like%20Shakespeare/14_lstm_shakespeare.ipynb)
+* **Sintesis Konseptual:** Mengatasi batasan mendasar *vanishing gradient* pada RNN standar dengan memperkenalkan arsitektur memori *Long Short-Term Memory* (LSTM) yang memanfaatkan jalur sel linier aditif (*gradient highway*).
+* **Poin Pembahasan Soal:**
+  * **Anatomi 4 Gerbang Kendali LSTM:**
+    1. *Forget Gate* ($\mathbf{f}_t = \sigma(\mathbf{W}_f [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_f)$): Mengatur proporsi informasi memori lama yang dihapus.
+    2. *Input Gate* ($\mathbf{i}_t = \sigma(\mathbf{W}_i [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_i)$): Mengatur proporsi informasi kandidat baru yang disimpan.
+    3. *Candidate State* ($\tilde{\mathbf{C}}_t = \tanh(\mathbf{W}_c [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_c)$): Representasi kandidat konten informasi baru.
+    4. *Output Gate* ($\mathbf{o}_t = \sigma(\mathbf{W}_o [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_o)$): Menyaring bagian mana dari memori sel yang diteruskan ke hidden state eksternal.
+  * **Jalur Keadaan Sel Aditif (*Cell State Highway*):** $\mathbf{C}_t = \mathbf{f}_t \odot \mathbf{C}_{t-1} + \mathbf{i}_t \odot \tilde{\mathbf{C}}_t$. Karena operasi pembaruan bersifat penjumlahan (aditif) dan $\frac{\partial \mathbf{C}_t}{\partial \mathbf{C}_{t-1}} = \mathbf{f}_t$, jika gerbang forget bernilai mendekati 1, gradien dapat mengalir tanpa pelemahan eksponensial melintasi ratusan langkah waktu.
+  * **Pembangkitan Teks Karakter Shakespeare:** Implementasi LSTM dari nol yang menghasilkan teks bergaya sandiwara Shakespeare dengan koherensi kata dan sintaks yang jauh melampaui kemampuan RNN standar.
+
+---
+
+### [Chapter 15 - Deep Learning on Unseen Data](Chapter%2015%20-%20Deep%20Learning%20on%20Unseen%20Data/15_federated_learning.ipynb)
+* **Sintesis Konseptual:** Memecahkan dilema privasi, regulasi hukum (GDPR/HIPAA), dan isolasi data desentralisasi melalui paradigma *Federated Learning* dan *Differential Privacy*—membawa model ke tempat data berada tanpa pernah memindahkan data mentah ke server pusat.
+* **Poin Pembahasan Soal:**
+  * **Arsitektur Federated Averaging (FedAvg):** Klien edge (rumah sakit / ponsel pintar) melakukan pelatihan SGD secara lokal pada data privat mereka sendiri selama beberapa epoch, kemudian hanya mengirimkan parameter/gradien model ke server pusat untuk digabungkan secara tertimbang:
+    $$\mathbf{w}_{t+1} = \sum_{k=1}^K \frac{n_k}{n} \mathbf{w}_{t+1}^k$$
+  * **Dilema Data Heterogen (Non-IID):** Skew distribusi label dan fitur di dunia nyata menyebabkan pergeseran gradien (*client drift*), yang disimulasikan dari nol dengan ketidakseimbangan kelas dari 10% hingga 90%.
+  * **Secure Multi-Party Aggregation (SecAgg):** Menggunakan topologi masker acak berpasangan berjumlah nol (*pairwise zero-sum masks* $r_{ij} = -r_{ji}$). Masker saling meniadakan saat dijumlahkan di server, sehingga server mendapatkan agregat total tanpa pernah melihat bobot individu dari klien mana pun.
+  * **Differential Privacy (DP-FedAvg):** Memberikan jaminan matematis $(\epsilon, \delta)$-privasi melalui *gradient clipping* ($L_2$ norm threshold $S$) dan injeksi *Gaussian noise* terkalibrasi $\mathcal{N}(0, \sigma^2 \mathbf{I})$, serta menganalisis kurva pertukaran privasi terhadap akurasi (*privacy-utility tradeoff*).
 
 ---
 
